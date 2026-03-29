@@ -1,0 +1,84 @@
+strategy:
+    name: "XAUUSD_Scalper"
+    symbol: "XAUUSD"
+
+    timeframes:
+        htf: "H4"
+        mtf: "H1"
+        setup: "M30"
+        entry: "M15"
+
+    candle_history: 300
+
+    indicators:
+        ema:
+            fast: 9
+            med: 21
+            slow: 50
+            trend: 200
+        macd:
+            fast: 12
+            slow: 26
+            signal: 9
+        rsi:
+            period: 14
+            oversold: 35
+            overbought: 65
+        stochastic:
+            k: 5
+            d: 3
+            smooth: 3
+        atr:
+            period: 14
+            sl_multiplier: 1.2
+            min_threshold: 0.5
+            max_threshold: 3.0
+        bollinger:
+            period: 20
+            std: 2.0
+        keltner:
+            period: 20
+            multiplier: 1.5
+
+    signal_weights:
+        mtf_alignment: 30
+        ema_stack: 20
+        macd_direction: 15
+        rsi_zone: 10
+        candlestick_pattern: 15
+        atr_filter: 5
+        spread_session: 5
+
+    thresholds:
+        full_size_score: 75
+        half_size_score: 60
+
+    risk:
+        risk_per_trade: 0.01
+        max_daily_trades: 3
+        max_daily_loss: 0.03
+        min_rr: 1.5
+        max_consecutive_loss: 3
+        cooldown_hours: 2
+        weekly_drawdown: 0.06
+
+    tp_structure:
+        tp1_rr: 1.0 # 50% close at 1:1
+        tp2_rr: 2.0 # 30% close at 1:2
+        tp3_trailing: true # 20% trailing runner
+        trailing_atr_mult: 1.0
+
+    sessions:
+        - name: "London"
+          open_wib: 14
+          close_wib: 18
+        - name: "New York"
+          open_wib: 19
+          close_wib: 23
+
+    news_filter:
+        enabled: true
+        suspend_minutes_before: 30
+        suspend_minutes_after: 30
+        impact_levels: ["HIGH"]
+        currencies: ["USD", "XAU"]

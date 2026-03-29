@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "trading-bot"
+version = "0.1.0"
+description = "Professional XAUUSD scalping bot for MetaTrader 5 (Elev8)"
+authors = ["Trader"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+MetaTrader5 = "^5.0.45"
+pandas = "^2.2.0"
+numpy = "^1.26.0"
+pandas-ta = "^0.3.14b"
+pydantic-settings = "^2.2.0"
+pydantic = "^2.6.0"
+loguru = "^0.7.2"
+apscheduler = "^3.10.4"
+python-telegram-bot = "^21.0"
+httpx = "^0.27.0"
+python-dotenv = "^1.0.0"
+pytz = "^2024.1"
+aiofiles = "^23.2.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-asyncio = "^0.23.0"
+pytest-mock = "^3.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

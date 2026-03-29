@@ -1,11 +1,11 @@
-# Trading Bot — XAUUSD Scalper (MT5 + Exness)
+# Trading Bot — XAUUSD Scalper (MT5 + Elev8)
 
 Professional automated scalping bot for **XAUUSD** using **MetaTrader 5** Python API.
 
 ## 📋 Requirements
 
 - **OS**: Windows (required for MT5 Python library)
-- **MT5**: MetaTrader 5 desktop installed + logged into Exness
+- **MT5**: MetaTrader 5 desktop installed + logged into Elev8
 - **Python**: 3.11+
 - **Poetry**: `pip install poetry`
 
@@ -33,7 +33,7 @@ Edit `.env`:
 ```env
 MT5_LOGIN=12345678
 MT5_PASSWORD=your_password
-MT5_SERVER=Exness-MT5Trial     # Use Exness-MT5Real for live
+MT5_SERVER=Elev8-Server      # Use your Elev8 live/demo server name
 PAPER_TRADE=true               # Set false for live execution
 TELEGRAM_TOKEN=...
 TELEGRAM_CHAT_ID=...
@@ -93,5 +93,7 @@ tests/            Unit tests
 
 > Trading carries significant risk. Past performance does not guarantee future results.
 > Always test thoroughly on a demo account before going live.
+
 # trading-bot-forex
+
 # trading-bot-forex

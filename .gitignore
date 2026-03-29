@@ -1,0 +1,9 @@
+.env
+*.pyc
+__pycache__/
+.pytest_cache/
+trading_bot.db
+drawdown_state.json
+logs/
+*.log
+.DS_Store

@@ -94,3 +94,4 @@ tests/            Unit tests
 > Trading carries significant risk. Past performance does not guarantee future results.
 > Always test thoroughly on a demo account before going live.
 # trading-bot-forex
+# trading-bot-forex

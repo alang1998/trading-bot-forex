@@ -6,11 +6,11 @@ authors = ["Trader"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.12"
 MetaTrader5 = "^5.0.45"
 pandas = "^2.2.0"
-numpy = "^1.26.0"
-pandas-ta = "^0.3.14b"
+numpy = "*"
+pandas-ta = "*"
 pydantic-settings = "^2.2.0"
 pydantic = "^2.6.0"
 loguru = "^0.7.2"
